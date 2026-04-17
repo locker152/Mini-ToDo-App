@@ -1,0 +1,26 @@
+
+.input-tabel {
+    display: block;
+    text-align: center;
+    font-size: 20px;
+            }
+
+tr, th ,td{
+     border: 1px solid black;
+     text-align: 100% ;
+        }
+td {
+    text-align: center;
+}
+.input-class {
+     font-size: 20px;
+
+            }
+.elemen-tabel {
+    width: 100%;
+
+        }
+.state {
+  width: 120px;         
+  white-space: nowrap;
+}
