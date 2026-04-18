@@ -1,4 +1,36 @@
 var newid = 1
+
+function getstate(row) {
+    var radiostate = row.cells[1].querySelector('input[type="radio"]:first-child')
+    return radiostate ? radiostate.checked : false
+}
+function filterapply() {
+    var filtervalue = document.getElementById('filter-select').value
+    var tbody = document.querySelector('#table-element tbody')
+    var rows = tbody.querySelectorAll('tr')
+    rows.forEach(function(row) {
+        var state = getstate(row)
+        var shouldstate = false
+        if (filtervalue === 'all') {
+            shouldstate = true
+        } else if (filtervalue === 'completed') {
+            shouldstate = state === true
+        }   else if (filtervalue === 'incomplete') {
+            shouldstate = state === false
+        }
+        row.style.display = shouldstate ? '' : 'none'
+    })  
+    
+}
+function bindfilter() {
+        var filterselect = document.getElementById('filter-select')
+        if (filterselect) {
+            filterselect.addEventListener('change',filterapply)
+        }
+    }
+
+
+
 function addTask() {
     var taskname = document.getElementById('input-class')
 
@@ -26,6 +58,7 @@ function addTask() {
     deleteBtn.className = 'delete-btn'   
     deleteBtn.onclick = function() {
         newrow.remove()
+        filterapply()
     }
     cell3.appendChild(deleteBtn)
     
@@ -33,11 +66,14 @@ function addTask() {
         complete.onclick = function() {
             cell1.style.textDecoration = 'line-through'
             cell1.style.color = 'gray'
+            filterapply()
+
         }
     var incomplete = document.getElementById(`incomplete_${newid}`)
         incomplete.onclick = function() {
             cell1.style.textDecoration = 'none'
             cell1.style.color = 'black'
+            filterapply()
         }
 
     newid++
@@ -47,4 +83,11 @@ function addTask() {
     
     taskname.value = "";
     taskname.focus();
+    filterapply()
+
+    
+}
+window.onload = function() {
+    bindfilter()    
+    filterapply()   
 }
