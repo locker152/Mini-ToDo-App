@@ -29,6 +29,16 @@ function addTask() {
     }
     cell3.appendChild(deleteBtn)
     
+    var complete = document.getElementById(`complete_${newid}`)
+        complete.onclick = function() {
+            cell1.style.textDecoration = 'line-through'
+            cell1.style.color = 'gray'
+        }
+    var incomplete = document.getElementById(`incomplete_${newid}`)
+        incomplete.onclick = function() {
+            cell1.style.textDecoration = 'none'
+            cell1.style.color = 'black'
+        }
 
     newid++
 
