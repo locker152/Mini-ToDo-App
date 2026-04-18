@@ -37,6 +37,14 @@ td:last-child {
     white-space: nowrap; 
     padding: 4px 8px;    
 }
-
-
+.filter-section {
+    display: flex;
+    justify-content: flex-end;  
+}
+.span {
+    font-size: 7px;
+}
+.elemen-tabel {
+    margin-top: 20px;
+}
     

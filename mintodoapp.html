@@ -13,6 +13,15 @@
         <input id="input-class" placeholder="请输入任务">
         <button class="add-button" onclick="addTask()">添加</button>
     </label>
+    <div class="filter-section">
+            <span>筛选：</span>
+            <select id="filter-select">
+                <option value="all">全部</option>
+                <option value="completed">已完成</option>
+                <option value="incomplete">未完成</option>
+            </select>
+            <br>
+        </div>
         
     <table class="elemen-tabel" id="table-element"> 
         <thead>
@@ -22,6 +31,7 @@
                 <th>操作</th>   
             </tr>
         </thead>
+        
         <tbody>
 
         </tbody>
