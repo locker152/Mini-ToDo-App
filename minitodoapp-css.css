@@ -1,25 +1,42 @@
-
 .input-tabel {
     display: block;
     text-align: center;
     font-size: 20px;
-            }
+}
 
-tr, th ,td{
-     border: 1px solid black;
-        }
+tr, th, td {
+    border: 1px solid black;
+}
+.elemen-tabel thead tr th:nth-child(2) {
+    width: 1px;         
+    white-space: nowrap;
+}
+
 td {
     text-align: center;
+    vertical-align: middle;  
+    padding: 8px;            
 }
-.input-class {
-     font-size: 20px;
 
-            }
+.input-class {
+    font-size: 20px;
+}
+
 .elemen-tabel {
     width: 100%;
-
-        }
-.state {
-  width: 120px;         
-  white-space: nowrap;
+    border-collapse: collapse; 
 }
+
+.state {
+    width: 120px;         
+    white-space: nowrap;
+}
+th:last-child,
+td:last-child {
+    width: 1px;         
+    white-space: nowrap; 
+    padding: 4px 8px;    
+}
+
+
+    
