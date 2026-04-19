@@ -50,7 +50,7 @@ function addTask() {
     var cell3 = newrow.insertCell(2)   
 
     cell1.innerHTML = newtask
-    cell2.innerHTML = `<input id="complete_${newid}" type="radio" name="choice_${newid}">完成 <input id="incomplete_${newid}" type="radio" name="choice_${newid}">未完成`
+    cell2.innerHTML = `<input id="complete_${newid}" type="radio" name="choice_${newid}">完成 <input id="incomplete_${newid}" type="radio" name="choice_${newid}" checked>未完成`
     
     
     var deleteBtn = document.createElement('button')
