@@ -19,7 +19,7 @@ td {
 }
 
 .input-class {
-    font-size: 20px;
+    font-size: 30px;
 }
 
 .elemen-tabel {
@@ -41,10 +41,16 @@ td:last-child {
     display: flex;
     justify-content: flex-end;  
 }
-.span {
-    font-size: 7px;
+span {
+    font-size: 16px;
 }
 .elemen-tabel {
     margin-top: 20px;
 }
+tbody tr td {
+    height: 40px;         
+}
     
+th {
+    background-color: lightgray;
+}
